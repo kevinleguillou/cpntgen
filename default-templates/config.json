@@ -1,0 +1,21 @@
+{
+  "filenameCase": "KebabCase",
+  "templates" : [
+    {
+      "template": "component.tsx",
+      "filename": "{component}.tsx"
+    },
+    {
+      "template": "component.module.scss",
+      "filename": "{component}.module.scss"
+    },
+    {
+      "template": "component.interfaces.ts",
+      "filename": "{component}.interfaces.ts"
+    },
+    {
+      "template": "index.ts",
+      "filename": "index.ts"
+    }
+  ]
+}

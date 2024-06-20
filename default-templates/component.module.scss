@@ -1,0 +1,11 @@
+.{{ componentNameCamelCase }}{
+  background: black;
+  color: white;
+}
+
+@media (max-width: $mobileBreakpoint){
+  .{{ componentNameCamelCase }}{
+    background: black;
+    color: white;
+  }
+}

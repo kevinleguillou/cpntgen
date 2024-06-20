@@ -1,0 +1,19 @@
+{
+  "name": "cpntgen",
+  "version": "0.2.0",
+  "description": "Generates Typescript components boilerplate using templates",
+  "type": "module",
+  "exports": "./index.js",
+  "node": ">=14.16",
+  "bin": {
+    "cpntgen": "index.js"
+  },
+  "author": "Kevin Le Guillou <kevin@tilted.fr>",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "chalk": "^5.0.1",
+    "commander": "^9.4.0",
+    "mustache": "^4.2.0"
+  }
+}
