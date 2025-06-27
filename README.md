@@ -16,7 +16,8 @@ component-name built with files :
 Install globally with :
 
 ```
-yarn global add git@github.com:kevinleguillou/cpntgen.git
+yarn global add ssh://git@github.com:kevinleguillou/cpntgen.git
+npm install -g ssh://git@github.com:kevinleguillou/cpntgen.git
 ```
 
 ## Presets
