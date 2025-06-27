@@ -1,8 +1,15 @@
 # cpntgen
 
-Generates a component with all the files used in React projects, and adds the proper imports at the top of the TSX file.
+Generates a component with all the files you want.
 
-All the files are exported from a main `index.ts`.
+```
+$ cpntgen component-name
+
+component-name built with files :
+ ├ component-name/component-name.tsx
+ ├ component-name/component-name.module.scss
+ └ component-name/component-name.interfaces.ts
+```
 
 ## Usage
 
@@ -12,27 +19,21 @@ Install globally with :
 yarn global add git@github.com:kevinleguillou/cpntgen.git
 ```
 
-In your `component` or `container` folder, run :
+## Presets
 
-```bash
-cpntgen component-name
-```
-
-Will output :
+The following presets are available : 
 
 ```
-component-name/
-  index.ts
-  component-name.tsx
-  component-name.interfaces.ts
-  component-name.scss
+$ cpntgen component-name --preset react
+$ cpntgen component-name --preset react-native
+$ cpntgen component-name --preset solidjs
 ```
 
-## Custom Templates
+## Custom Presets
 
 You can override the files produced by adding a `--template <template-folder>` option.
 
-The template folder must follow the same organisation as the example in `default-templates` : 
+The template folder must follow the same organisation as the example in `templates` : 
 
 ### config.json
 
@@ -74,14 +75,16 @@ These templates can use the following Mustache variables :
 - `componentNameKebabCase`
 - `workingDirectory` : the directory where you are running the command line
 
-See `default-templates/` for a working example that builds kebab-case components and absolute path imports.
+See `templates/` for examples that builds kebab-case components and path imports with aliases (like `@components/`).
 
 ### Simplify the usage of a custom config
 
 Once you're happy with your custom config, replace the whole command with a command line alias so you don't have to type it each time :
 
-In your `~/.bash_profile` file or equivalent :
+In your `~/.zshrc` file or equivalent :
 
 ```
-alias tiltedgen="tiltedgen --template my-template-folder/"
+alias generate="cpntgen --template my-template-folder/"
+
+$ generate my-component
 ```
